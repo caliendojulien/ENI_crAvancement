@@ -1,38 +1,4 @@
-﻿##[Ps1 To Exe]
-##
-##NcDBCIWOCzWE8pGP3wFk4Fn9fksqYsyehZKi14qo8PrQlDDPW5sTTGh4kj2uEFOpF/cKUJU=
-##Kd3HDZOFADWE8uK1
-##Nc3NCtDXThU=
-##Kd3HFJGZHWLWoLaVvnQnhQ==
-##LM/RF4eFHHGZ7/K1
-##K8rLFtDXTiS5
-##OsHQCZGeTiiZ4tI=
-##OcrLFtDXTiW5
-##LM/BD5WYTiiZ4tI=
-##McvWDJ+OTiiZ4tI=
-##OMvOC56PFnzN8u+VslQ=
-##M9jHFoeYB2Hc8u+VslQ=
-##PdrWFpmIG2HcofKIo2QX
-##OMfRFJyLFzWE8uK1
-##KsfMAp/KUzWI0g==
-##OsfOAYaPHGbQvbyVvnQnqxqO
-##LNzNAIWJGmPcoKHc7Do3uAu+DDlL
-##LNzNAIWJGnvYv7eVvnQX
-##M9zLA5mED3nfu77Q7TV64AuzAgg=
-##NcDWAYKED3nfu77Q7TV64AuzAgg=
-##OMvRB4KDHmHQvbyVvnQX
-##P8HPFJGEFzWE8tI=
-##KNzDAJWHD2fS8u+Vgw==
-##P8HSHYKDCX3N8u+VwDV77E7gRmdrRNCXsLOppA==
-##LNzLEpGeC3fMu77Ro2k3hQ==
-##L97HB5mLAnfMu77Ro2k3hQ==
-##P8HPCZWEGmaZ7/K1
-##L8/UAdDXTlaDjofG5iZk2WjvTmEuUuGeqr2zy5GA0P/6qSTeTKYeXFh+k2f5HE7d
-##Kc/BRM3KXhU=
-##
-##
-##fd6a9f26a06ea3bc99616d4851b372ba
-# Lecture du fichier de paramètres
+﻿# Lecture du fichier de paramètres
 Get-Content params.txt | Foreach-Object{
    $var = $_.Split('=')
    New-Variable -Name $var[0] -Value $var[1]
@@ -59,7 +25,8 @@ $body = "Bonjour,`r`n"
 $body += "Comme tous les mois, un point sur l'avancement de mon ouvrage : $titre`r`n`r`n`r`n"
 $body += "=============Par chapitre=============`r`n"
 Foreach ($l in $listeChapitre) {
-    $body += "$l `r`n"
+    $body += "$l"
+    $body += "`n`r"
 }
 $body += "`r`n===`r`n"
 $body += "Nombre de chapitres : $chapitreTotal `n"
