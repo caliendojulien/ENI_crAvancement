@@ -16,7 +16,7 @@ $listeChapitre = ""
 ForEach ($c in $chapitres) {
     $chapitreTotal++
     $nbreDeCaracteresDuChapitre = .\odt2txt.exe $c | Measure-Object -character | Select-Object -ExpandProperty Characters
-    $listeChapitre += "$chapitreTotal : $nbreDeCaracteresDuChapitre caracteres"
+    $listeChapitre += "$chapitreTotal : $nbreDeCaracteresDuChapitre caracteres `r`n"
     $caracteresTotal += $nbreDeCaracteresDuChapitre
 }
 
@@ -26,7 +26,6 @@ $body += "Comme tous les mois, un point sur l'avancement de mon ouvrage : $titre
 $body += "=============Par chapitre=============`r`n"
 Foreach ($l in $listeChapitre) {
     $body += "$l"
-    $body += "`n`r"
 }
 $body += "`r`n===`r`n"
 $body += "Nombre de chapitres : $chapitreTotal `n"
