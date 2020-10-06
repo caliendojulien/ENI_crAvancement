@@ -1,0 +1,7 @@
+titre=Mon titre
+objectifCaracteres=400000
+smtp=smtp.office365.com
+port=587
+expediteur=moi@mail.fr
+destinataire=elle@mail.fr
+mail=true
